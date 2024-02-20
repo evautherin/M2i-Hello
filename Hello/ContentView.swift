@@ -15,7 +15,7 @@ struct ContentView: View {
         let upperName = name.uppercased()
         
         VStack {
-            Text("Counter: \(counter) \(name)")
+            Text("Counter: \(counter) \(upperName)")
             Button("Increment") {
                 counter += 1
             }
