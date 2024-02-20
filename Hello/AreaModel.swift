@@ -13,5 +13,5 @@ class AreaModel {
     var height = 50.0
     
     var area: Double { width*height }
-    var areaString: String { String(format: "Angle: %.2f", area) }
+    var areaString: String { String(format: "%.2f", area) }
 }

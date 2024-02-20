@@ -13,7 +13,7 @@ struct LengthView: View {
     
     var body: some View {
         VStack {
-            Text("\(label): \(value)")
+            Text("\(label): \(String(format: "%.2f", value))")
             Slider(value: $value, in: 0...100.0)
         }
         .padding()
