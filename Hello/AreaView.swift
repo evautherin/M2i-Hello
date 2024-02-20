@@ -8,17 +8,13 @@
 import SwiftUI
 
 struct AreaView: View {
-    @State var width = 50.0
-    @State var height = 50.0
+    @Bindable var model = AreaModel()
     
     var body: some View {
-        let area = width*height
-        let areaString = String(format: "Angle: %.2f", area)
-        
         VStack {
-            LengthView(label: "Width", value: $width)
-            LengthView(label: "Height", value: $height)
-            Text("Area: \(areaString)")
+            LengthView(label: "Width", value: $model.width)
+            LengthView(label: "Height", value: $model.height)
+            Text("Area: \(model.areaString)")
         }
     }
 }
